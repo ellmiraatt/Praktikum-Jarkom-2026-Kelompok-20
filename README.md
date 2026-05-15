@@ -15,6 +15,7 @@
 | Modul | Topik                           | Direktori             |
 | ----- | ------------------------------- | --------------------- |
 | 1     | Konfigurasi Dasar Jaringan IPv4 | [Modul-1](./Modul-1/) |
+| 1     | Routing dan Manajemen IPv6 | [Modul-2](./Modul-2/) |
 
 ### Struktur Repository
 
