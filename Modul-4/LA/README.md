@@ -2,7 +2,7 @@
 ## Kelompok 20
 
 ## 1. Topologi Jaringan
-![Topologi](topologi.png)
+![Topologi](topologi%20tumod%204.png)
 
 ## 2. Tabel IP Address
 | Perangkat | Interface | IP Address | Gateway |
@@ -22,28 +22,22 @@
 ## 3. Hasil Pengujian
 
 ### Test 1 & 2 - Client LAN ping ke Cisco Router dan FortiGate
-![Test 1 & 2](ping_lan_ke_cisco_dan_fortiget.png)
+![Test 1 & 2](ping%20lan%20ke%20cisco%20dan%20fortiget.png)
 
 ### Test 3 & 4 - Client LAN ping ke DMZ dan akses web
-![Test 3 & 4](ping_lan_ke_server_dmz_dan_web_dmz.png)
+![Test 3 & 4](ping%20lan%20ke%20server%20dmz%20dan%20we.png)
 
 ### Test 5 & 6 - Client WAN ping ke MikroTik dan FortiGate
-![Test 5 & 6](Wan_ke_mikrotik_dan_fortiget.png)
+![Test 5 & 6](Wan%20ke%20mikrotik%20dan%20fortiget.png)
 
 ### Test 7 - Client WAN akses web http://10.10.10.2
-![Test 7](wan_ke_web.png)
+![Test 7](wan%20ke%20web.png)
 
 ### Test 8 & 9 - Client WAN ping ke LAN dan DMZ (GAGAL)
-![Test 8 & 9](ping_wan_gagal.png)
+![Test 8 & 9](ping%20wan%20gagal.png)
 
 ### Test 10 - Server DMZ ping ke Client LAN
-![Test 10](DMZ_ke_LAN.png)
+![Test 10](DMZ%20ke%20LAN.png)
 
 ## 4. Kesimpulan
 Implementasi DMZ Firewall menggunakan FortiGate berhasil dilakukan. Firewall berhasil memisahkan zona WAN, LAN, dan DMZ. Client WAN tidak dapat mengakses LAN maupun IP asli DMZ secara langsung, namun dapat mengakses web server melalui VIP/Port Forwarding. Semua 10 pengujian berhasil sesuai hasil yang diharapkan.
-
-### Test 10: Server DMZ ping ke Client LAN
-[screenshot hasil ping]
-
-## 5. Analisis dan Kesimpulan
-[tulis analisis kelompok]
