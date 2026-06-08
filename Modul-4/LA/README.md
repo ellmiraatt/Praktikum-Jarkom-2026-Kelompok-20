@@ -1,8 +1,8 @@
-# Laporan Praktikum Modul 4 - DMZ Firewall
+# Laporan Modul 4 - DMZ Firewall
 ## Kelompok 20
 
 ## 1. Topologi Jaringan
-[masukkan gambar topologi]
+![Topologi](topologi.png)
 
 ## 2. Tabel IP Address
 | Perangkat | Interface | IP Address | Gateway |
@@ -19,48 +19,28 @@
 | Client WAN | eth0 | 172.16.100.10/24 | 172.16.100.1 |
 | Ubuntu DMZ | eth0 | 192.168.20.10/24 | 192.168.20.1 |
 
-## 3. Konfigurasi Perangkat
+## 3. Hasil Pengujian
 
-### MikroTik ISP
-[screenshot konfigurasi + command]
+### Test 1 & 2 - Client LAN ping ke Cisco Router dan FortiGate
+![Test 1 & 2](ping_lan_ke_cisco_dan_fortiget.png)
 
-### FortiGate
-[screenshot konfigurasi + command]
+### Test 3 & 4 - Client LAN ping ke DMZ dan akses web
+![Test 3 & 4](ping_lan_ke_server_dmz_dan_web_dmz.png)
 
-### Cisco Router
-[screenshot konfigurasi + command]
+### Test 5 & 6 - Client WAN ping ke MikroTik dan FortiGate
+![Test 5 & 6](Wan_ke_mikrotik_dan_fortiget.png)
 
-### Ubuntu Server DMZ
-[screenshot konfigurasi + command]
+### Test 7 - Client WAN akses web http://10.10.10.2
+![Test 7](wan_ke_web.png)
 
-## 4. Hasil Pengujian
+### Test 8 & 9 - Client WAN ping ke LAN dan DMZ (GAGAL)
+![Test 8 & 9](ping_wan_gagal.png)
 
-### Test 1: Client LAN ping ke Cisco Router
-[screenshot hasil ping]
+### Test 10 - Server DMZ ping ke Client LAN
+![Test 10](DMZ_ke_LAN.png)
 
-### Test 2: Client LAN ping ke FortiGate
-[screenshot hasil ping]
-
-### Test 3: Client LAN ping ke Server DMZ
-[screenshot hasil ping]
-
-### Test 4: Client LAN akses web DMZ
-[screenshot browser/wget]
-
-### Test 5: Client WAN ping ke MikroTik
-[screenshot hasil ping]
-
-### Test 6: Client WAN ping ke FortiGate
-[screenshot hasil ping]
-
-### Test 7: Client WAN akses web http://10.10.10.2
-[screenshot browser]
-
-### Test 8: Client WAN ping ke LAN (GAGAL)
-[screenshot 100% packet loss]
-
-### Test 9: Client WAN ping ke IP DMZ (GAGAL)
-[screenshot 100% packet loss]
+## 4. Kesimpulan
+Implementasi DMZ Firewall menggunakan FortiGate berhasil dilakukan. Firewall berhasil memisahkan zona WAN, LAN, dan DMZ. Client WAN tidak dapat mengakses LAN maupun IP asli DMZ secara langsung, namun dapat mengakses web server melalui VIP/Port Forwarding. Semua 10 pengujian berhasil sesuai hasil yang diharapkan.
 
 ### Test 10: Server DMZ ping ke Client LAN
 [screenshot hasil ping]
