@@ -223,9 +223,9 @@ MikroTik Jakarta berhasil ping ke FortiGate Jakarta (10.10.101.1) dengan packet-
 ![get system interface physical](<get system interface physical fortinet jakarta.png>)
 
 Status interface FortiGate Jakarta:
-- port1: `10.10.100.1/30` — UP (link ke Cisco Jakarta)
-- port2: `10.10.101.1/30` — UP (link ke MikroTik Jakarta)
-- port3: `10.0.12.2/30` — UP (link WAN ke ISP)
+- port1: `10.10.100.1/30`  UP (link ke Cisco Jakarta)
+- port2: `10.10.101.1/30`  UP (link ke MikroTik Jakarta)
+- port3: `10.0.12.2/30`  UP (link WAN ke ISP)
 - port4: down (tidak digunakan)
 
 #### Screenshot `get router info routing-table all`
@@ -305,7 +305,7 @@ Route yang diterima dari Surabaya via OSPF:
 IP Address MikroTik ISP:
 - `10.0.12.1/30` pada ether2 (ke FortiGate Jakarta)
 - `10.0.13.1/30` pada ether3 (ke FortiGate Surabaya)
-- `10.4.89.200/24` pada ether1 (DHCP dari cloud — nilai dinamis, bisa berbeda)
+- `10.4.89.200/24` pada ether1 (DHCP dari cloud  nilai dinamis, bisa berbeda)
 
 #### Screenshot `/ip route print`
 
@@ -339,12 +339,12 @@ NAT Masquerade aktif pada ether1 sehingga semua traffic dari jaringan lab dapat 
 - Instalasi ISC-DHCP Server dan konfigurasi pool VLAN 10 dan VLAN 20
 - Instalasi Nginx sebagai web server Jakarta
 
- Kendala — Screenshot Nginx tidak tersedia
+ Kendala  Screenshot Nginx tidak tersedia
  Pada saat pengerjaan modul ini, Ubuntu Server **tidak dapat menginstall Nginx** karena kendala koneksi jaringan saat proses `apt install nginx -y`. Paket tidak dapat diunduh dari repository sehingga instalasi Nginx tidak berhasil diselesaikan. Oleh karena itu, screenshot tampilan web server Nginx dari browser tidak dapat disertakan dalam laporan ini. Screenshot untuk `ip a`, `ip route`, isi `/etc/dhcp/dhcpd.conf`, dan ping 8.8.8.8 sudah didokumentasikan pada sesi sebelumnya.
 
 ---
 
-### Tugas Modul 6  Konfigurasi MikroTik ISP (Lanjutan — Bukti Ping)
+### Tugas Modul 6  Konfigurasi MikroTik ISP (Lanjutan  Bukti Ping)
 
 **Perangkat:** MikroTik ISP
 
@@ -381,7 +381,7 @@ MikroTik ISP berhasil ping ke FortiGate Surabaya (10.0.13.2) dengan packet-loss=
 - Mengkonfigurasi link ether1 ke FortiGate Surabaya (10.10.200.2/30)
 - Menambahkan default route menuju FortiGate Surabaya
 
-#### Screenshot `show vlan brief` — Switch Surabaya
+#### Screenshot `show vlan brief`  Switch Surabaya
 
 ![show vlan brief surabaya](<show vlan brief surabaya.png>)
 
@@ -389,13 +389,13 @@ VLAN yang aktif di Switch Surabaya:
 - VLAN 30 (sales): aktif, port Gi0/1
 - VLAN 40 (operations): aktif, port Gi0/2 dan Gi0/3
 
-#### Screenshot `show interfaces trunk` — Switch Surabaya
+#### Screenshot `show interfaces trunk`  Switch Surabaya
 
 ![show interfaces trunk surabaya](<show interfaces trunk switch surabaya.png>)
 
 Port Gi0/0 berstatus trunking (802.1q), membawa VLAN 30 dan 40. Native VLAN adalah VLAN 1.
 
-#### Screenshot `/ip address print` — MikroTik Surabaya
+#### Screenshot `/ip address print`  MikroTik Surabaya
 
 ![ip address print mikrotik surabaya](<ip address print mikrotik surabaya.png>)
 
@@ -404,19 +404,19 @@ IP Address MikroTik Surabaya:
 - `192.168.30.1/24` pada vlan30-sales (gateway VLAN 30)
 - `192.168.40.1/24` pada vlan40-operations (gateway VLAN 40)
 
-#### Screenshot `/ip dhcp-server print` — MikroTik Surabaya
+#### Screenshot `/ip dhcp-server print`  MikroTik Surabaya
 
 ![ip dhcp-server print](<ip dhcp server print mikrotik surabaya.png>)
 
 DHCP Server `dhcp1` aktif pada interface vlan30-sales, menggunakan pool `dhcp_pool0` dengan lease-time 10 menit.
 
-#### Screenshot `/ip pool print` — MikroTik Surabaya
+#### Screenshot `/ip pool print`  MikroTik Surabaya
 
 ![ip pool print](<ip pool print mikrotik surabaya.png>)
 
 Pool DHCP untuk VLAN 30 Sales: range `192.168.30.100 – 192.168.30.200`, sesuai ketentuan modul.
 
-#### Screenshot `/ip route print` — MikroTik Surabaya
+#### Screenshot `/ip route print`  MikroTik Surabaya
 
 ![ip route print mikrotik surabaya](<ip route print mikrotik surabaya.png>)
 
@@ -450,8 +450,8 @@ MikroTik Surabaya berhasil ping ke internet (8.8.8.8) dengan packet-loss=0%, mem
 ![get system interface physical surabaya](<get system interface physical fortinet surabaya.png>)
 
 Status interface FortiGate Surabaya:
-- port1: `10.0.13.2/30` — UP (link WAN ke MikroTik ISP)
-- port2: `10.10.200.1/30` — UP (link ke MikroTik Surabaya)
+- port1: `10.0.13.2/30`  UP (link WAN ke MikroTik ISP)
+- port2: `10.10.200.1/30`  UP (link ke MikroTik Surabaya)
 - port3 dan port4: down (tidak digunakan)
 
 #### Screenshot `get router info routing-table all`
@@ -507,30 +507,7 @@ Route yang diterima dari Jakarta via OSPF:
 
 ---
 
-## 4. Analisis Jalur Traffic Jakarta ke Surabaya
 
-Berdasarkan routing table dan konfigurasi yang telah dilakukan, berikut adalah jalur traffic dari Client Jakarta ke Client Surabaya:
-
-```
-Client Jakarta (VLAN 10/20/60)
-  → VRRP Gateway Virtual (192.168.10.1 / 192.168.20.1 / 192.168.60.1)
-    → Cisco Router Jakarta atau MikroTik Jakarta (sesuai master VRRP)
-      → FortiGate Jakarta (10.10.100.1 atau 10.10.101.1)
-        → GRE Tunnel (172.16.0.1 → 172.16.0.2)
-          → FortiGate Surabaya
-            → MikroTik Surabaya
-              → Client Surabaya (VLAN 30/40)
-```
-
-Rute dikelola secara dinamis oleh **OSPF over GRE**:
-- FortiGate Jakarta meng-advertise route 192.168.10.0/24, 192.168.20.0/24, 192.168.60.0/24 ke OSPF
-- FortiGate Surabaya meng-advertise route 192.168.30.0/24, 192.168.40.0/24 ke OSPF
-- Kedua sisi saling menerima route sebagai **OSPF External Type 2 (E2)** karena menggunakan redistribute static
-
-Untuk **failover gateway Jakarta**, VRRP memastikan bahwa jika salah satu router (Cisco atau MikroTik) down, router lainnya otomatis mengambil alih sebagai Master tanpa intervensi manual.
-
----
-
-## 5. Kesimpulan
+## 4. Kesimpulan
 
 Praktikum ini berhasil mengimplementasikan jaringan enterprise yang menghubungkan kantor Jakarta (HQ) dan Surabaya (Branch). VLAN, VRRP, dan DHCP terpusat berjalan dengan baik di sisi Jakarta, begitu pula VLAN dan DHCP lokal di sisi Surabaya. GRE Tunnel antar-FortiGate berhasil terbentuk, dan OSPF over GRE berhasil mendistribusikan route antar-site secara dinamis dengan status neighbor Full. Seluruh perangkat dapat mengakses internet melalui MikroTik ISP dengan NAT Masquerade. Satu-satunya kendala yang dihadapi adalah instalasi Nginx di Ubuntu Server yang tidak berhasil diselesaikan karena paket tidak dapat diunduh saat menjalankan `apt install nginx -y` akibat kendala koneksi ke repository.
