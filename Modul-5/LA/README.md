@@ -88,7 +88,7 @@ Perangkat yang digunakan antara lain: Cisco VIoS, Cisco Switch, MikroTik RouterO
 
 #### Screenshot `show vlan brief`
 
-![show vlan brief](show_vlan_brief_jakarta.png)
+![show vlan brief](screenshots/show%20vlan%20brief%20jakarta.png)
 
 Hasil `show vlan brief` menunjukkan:
 - VLAN 10 (FINANCE) aktif dengan port Gi0/1 sebagai access VLAN 10
@@ -97,7 +97,7 @@ Hasil `show vlan brief` menunjukkan:
 
 #### Screenshot `show interfaces trunk`
 
-![show interfaces trunk](show_interfaces_trunk_switch_jakarta.png)
+![show interfaces trunk](screenshots/show%20interfaces%20trunk%20switch%20jakarta.png)
 
 Hasil `show interfaces trunk` menunjukkan:
 - Port Gi0/0 dan Gi0/1 berstatus trunking dengan enkapsulasi 802.1q
@@ -119,7 +119,7 @@ Hasil `show interfaces trunk` menunjukkan:
 
 #### Screenshot `show ip interface brief`
 
-![show ip interface brief](show_ip_interface_brief_cisco_jakarta.png)
+![show ip interface brief](screenshots/show%20ip%20interface%20brief%20cisco%20jakarta.png)
 
 Interface yang aktif:
 - Gi0/0: 10.10.100.2 (link ke FortiGate Jakarta)
@@ -129,7 +129,7 @@ Interface yang aktif:
 
 #### Screenshot `show vrrp brief`
 
-![show vrrp brief](show_vrrp_brief_cisco_jakarta.png)
+![show vrrp brief](screenshots/show%20vrrp%20brief%20cisco%20jakarta.png)
 
 Status VRRP:
 - Gi0/1.10 (VLAN 10): **Master** dengan prioritas 110, Group addr 192.168.10.1
@@ -138,7 +138,7 @@ Status VRRP:
 
 #### Screenshot Ping dari Cisco Router ke FortiGate Jakarta
 
-![ping cisco ke fortigate](cisco_jakarta_ping_ke_fortiget_jakarta.png)
+![ping cisco ke fortigate](screenshots/cisco%20jakarta%20ping%20ke%20fortiget%20jakarta.png)
 
 ```
 CISCO-JAKARTA#ping 10.10.100.1
@@ -165,7 +165,7 @@ Cisco Router Jakarta berhasil ping ke FortiGate Jakarta (10.10.100.1) dengan suc
 
 #### Screenshot `/ip address print`
 
-![ip address print mikrotik jakarta](ip_address_print_mikrotik_jakarta.png)
+![ip address print mikrotik jakarta](screenshots/ip%20address%20print%20mikrotik%20jakarta.png)
 
 IP Address yang terkonfigurasi:
 - `192.168.10.3/24` pada vlan10-finance
@@ -176,7 +176,7 @@ IP Address yang terkonfigurasi:
 
 #### Screenshot `/ip dhcp-relay print`
 
-![ip dhcp-relay print](ip_dhcp-relay_print_mikrotik_jakarta.png)
+![ip dhcp-relay print](screenshots/ip%20dhcp-relay%20print%20mikrotik%20jakarta.png)
 
 DHCP Relay dikonfigurasi untuk:
 - relay-vlan10: interface vlan10-finance → DHCP Server 192.168.60.10
@@ -186,7 +186,7 @@ DHCP Relay dikonfigurasi untuk:
 
 #### Screenshot `/ip route print`
 
-![ip route print mikrotik jakarta](ip_route_print_mikrotik_jakarta.png)
+![ip route print mikrotik jakarta](screenshots/ip%20route%20print%20mikrotik%20jakarta.png)
 
 Routing table MikroTik Jakarta:
 - Default route `0.0.0.0/0` via `10.10.101.1` (FortiGate Jakarta)
@@ -194,7 +194,7 @@ Routing table MikroTik Jakarta:
 
 #### Screenshot Ping dari MikroTik Jakarta ke FortiGate Jakarta
 
-![ping mikrotik ke fortigate](mikrotik_jakarta_ping_ke_fortinet_jakarta.png)
+![ping mikrotik ke fortigate](screenshots/mikrotik%20jakarta%20ping%20ke%20fortinet%20jakarta.png)
 
 MikroTik Jakarta berhasil ping ke FortiGate Jakarta (10.10.101.1) dengan packet-loss=0%.
 
@@ -216,7 +216,7 @@ MikroTik Jakarta berhasil ping ke FortiGate Jakarta (10.10.101.1) dengan packet-
 
 #### Screenshot `get system interface physical`
 
-![get system interface physical](get_system_interface_physical_fortinet_jakarta.png)
+![get system interface physical](screenshots/get%20system%20interface%20physical%20fortinet%20jakarta.png)
 
 Status interface FortiGate Jakarta:
 - port1: `10.10.100.1/30` — UP (link ke Cisco Jakarta)
@@ -226,7 +226,7 @@ Status interface FortiGate Jakarta:
 
 #### Screenshot `get router info routing-table all`
 
-![routing table all](get_router_info_routing-table_fortiget_jakarta.png)
+![routing table all](screenshots/get%20router%20info%20routing-table%20fortiget%20jakarta.png)
 
 Routing table FortiGate Jakarta mencakup:
 - `S* 0.0.0.0/0` via 10.0.12.1 (default route ke ISP)
@@ -239,7 +239,7 @@ Routing table FortiGate Jakarta mencakup:
 
 #### Screenshot Ping ke 8.8.8.8
 
-![ping 8.8.8.8 fortigate jakarta](execute_ping_8_8_8_8_fortiget_jakarta.png)
+![ping 8.8.8.8 fortigate jakarta](screenshots/execute%20ping%208.8.8.8%20fortiget%20jakarta.png)
 
 ```
 Fortinet-Jakarta # execute ping 8.8.8.8
@@ -251,7 +251,7 @@ FortiGate Jakarta berhasil mengakses internet (8.8.8.8) dengan 0% packet loss.
 
 #### Screenshot Ping ke IP Tunnel Surabaya (172.16.0.2)
 
-![ping tunnel surabaya](fortiget_jakarta_ping_fortiget_surabaya.png)
+![ping tunnel surabaya](screenshots/fortiget%20jakarta%20ping%20fortiget%20surabaya.png)
 
 ```
 Fortinet-Jakarta # execute ping 172.16.0.2
@@ -263,7 +263,7 @@ GRE Tunnel aktif — FortiGate Jakarta berhasil ping FortiGate Surabaya melalui 
 
 #### Screenshot `get router info ospf neighbor`
 
-![ospf neighbor](get_router_info_ospf_neighbor_fortiget_jakarta.png)
+![ospf neighbor](screenshots/get%20router%20info%20ospf%20neighbor%20fortiget%20jakarta.png)
 
 ```
 OSPF process 0, VRF 0:
@@ -275,7 +275,7 @@ OSPF Neighbor dengan FortiGate Surabaya (Router ID 2.2.2.2) berstatus **Full** m
 
 #### Screenshot `get router info routing-table ospf`
 
-![ospf routing table](get_router_info_routing-table_ospf_fortiget_jakarta.png)
+![ospf routing table](screenshots/get%20router%20info%20routing-table%20ospf%20fortiget%20jakarta.png)
 
 Route yang diterima dari Surabaya via OSPF:
 - `O E2 192.168.30.0/24` via 172.16.0.2, GRE-JKT-SBY (VLAN Sales Surabaya)
@@ -296,7 +296,7 @@ Route yang diterima dari Surabaya via OSPF:
 
 #### Screenshot `/ip address print`
 
-![ip address print mikrotik isp](ip_address_print_mikrotik_isp.png)
+![ip address print mikrotik isp](screenshots/ip%20address%20print%20mikrotik%20isp.png)
 
 IP Address MikroTik ISP:
 - `10.0.12.1/30` pada ether2 (ke FortiGate Jakarta)
@@ -305,7 +305,7 @@ IP Address MikroTik ISP:
 
 #### Screenshot `/ip route print`
 
-![ip route print mikrotik isp](ip_route_print_mikrotik_isp.png)
+![ip route print mikrotik isp](screenshots/ip%20route%20print%20mikrotik%20isp.png)
 
 Routing table MikroTik ISP:
 - `S 0.0.0.0/0` via 10.4.89.1 (default route ke cloud NAT)
@@ -315,7 +315,7 @@ Routing table MikroTik ISP:
 
 #### Screenshot `/ip firewall nat print`
 
-![ip firewall nat print](ip_firewall_nat_print_mikrotik_isp.png)
+![ip firewall nat print](screenshots/ip%20firewall%20nat%20print%20mikrotik%20isp.png)
 
 ```
 0   chain=srcnat action=masquerade out-interface=ether1
@@ -347,19 +347,19 @@ NAT Masquerade aktif pada ether1 sehingga semua traffic dari jaringan lab dapat 
 
 #### Screenshot Ping ke 8.8.8.8
 
-![ping 8.8.8.8 mikrotik isp](ping_8_8_8_8_mikrotik_isp.png)
+![ping 8.8.8.8 mikrotik isp](screenshots/ping%208.8.8.8%20mikrotik%20isp.png)
 
 MikroTik ISP berhasil ping ke internet (8.8.8.8) dengan sent=6, received=6, packet-loss=0%, avg-rtt=20ms. Membuktikan koneksi ke Cloud NAT berjalan normal.
 
 #### Screenshot Ping ke FortiGate Jakarta (10.0.12.2)
 
-![ping ke fortigate jakarta](ping_10_0_12_2.png)
+![ping ke fortigate jakarta](screenshots/ping%2010.0.12.2.png)
 
 MikroTik ISP berhasil ping ke FortiGate Jakarta (10.0.12.2) dengan packet-loss=0%. Koneksi link ISP ↔ Jakarta aktif.
 
 #### Screenshot Ping ke FortiGate Surabaya (10.0.13.2)
 
-![ping ke fortigate surabaya](ping_10_0_13_2_mikrotik_isp.png)
+![ping ke fortigate surabaya](screenshots/ping%2010.0.13.2%20mikrotik%20isp.png)
 
 MikroTik ISP berhasil ping ke FortiGate Surabaya (10.0.13.2) dengan packet-loss=0%. Koneksi link ISP ↔ Surabaya aktif. Kedua FortiGate saling reachable melalui MikroTik ISP, yang merupakan syarat agar GRE Tunnel dapat terbentuk.
 
@@ -380,7 +380,7 @@ MikroTik ISP berhasil ping ke FortiGate Surabaya (10.0.13.2) dengan packet-loss=
 
 #### Screenshot `show vlan brief` — Switch Surabaya
 
-![show vlan brief surabaya](show_vlan_brief_surabaya.png)
+![show vlan brief surabaya](screenshots/show%20vlan%20brief%20surabaya.png)
 
 VLAN yang aktif di Switch Surabaya:
 - VLAN 30 (sales): aktif, port Gi0/1
@@ -388,13 +388,13 @@ VLAN yang aktif di Switch Surabaya:
 
 #### Screenshot `show interfaces trunk` — Switch Surabaya
 
-![show interfaces trunk surabaya](show_interfaces_trunk_switch_surabaya.png)
+![show interfaces trunk surabaya](screenshots/show%20interfaces%20trunk%20switch%20surabaya.png)
 
 Port Gi0/0 berstatus trunking (802.1q), membawa VLAN 30 dan 40. Native VLAN adalah VLAN 1.
 
 #### Screenshot `/ip address print` — MikroTik Surabaya
 
-![ip address print mikrotik surabaya](ip_address_print_mikrotik_surabaya.png)
+![ip address print mikrotik surabaya](screenshots/ip%20address%20print%20mikrotik%20surabaya.png)
 
 IP Address MikroTik Surabaya:
 - `10.10.200.2/30` pada ether1 (link ke FortiGate Surabaya)
@@ -403,19 +403,19 @@ IP Address MikroTik Surabaya:
 
 #### Screenshot `/ip dhcp-server print` — MikroTik Surabaya
 
-![ip dhcp-server print](ip_dhcp_server_print_mikrotik_surabaya.png)
+![ip dhcp-server print](screenshots/ip%20dhcp%20server%20print%20mikrotik%20surabaya.png)
 
 DHCP Server `dhcp1` aktif pada interface vlan30-sales, menggunakan pool `dhcp_pool0` dengan lease-time 10 menit.
 
 #### Screenshot `/ip pool print` — MikroTik Surabaya
 
-![ip pool print](ip_pool_print_mikrotik_surabaya.png)
+![ip pool print](screenshots/ip%20pool%20print%20mikrotik%20surabaya.png)
 
 Pool DHCP untuk VLAN 30 Sales: range `192.168.30.100 – 192.168.30.200`, sesuai ketentuan modul.
 
 #### Screenshot `/ip route print` — MikroTik Surabaya
 
-![ip route print mikrotik surabaya](ip_route_print_mikrotik_surabaya.png)
+![ip route print mikrotik surabaya](screenshots/ip%20route%20print%20mikrotik%20surabaya.png)
 
 Routing table MikroTik Surabaya:
 - Default route `0.0.0.0/0` via `10.10.200.1` (FortiGate Surabaya)
@@ -423,7 +423,7 @@ Routing table MikroTik Surabaya:
 
 #### Screenshot Ping dari MikroTik Surabaya ke 8.8.8.8
 
-![ping 8.8.8.8 mikrotik surabaya](ping_8_8_8_8_mikrotik_surabaya.png)
+![ping 8.8.8.8 mikrotik surabaya](screenshots/ping%208.8.8.8%20mikrotik%20surabaya.png)
 
 MikroTik Surabaya berhasil ping ke internet (8.8.8.8) dengan packet-loss=0%, membuktikan koneksi dari jaringan internal Surabaya ke internet berjalan melalui FortiGate Surabaya → MikroTik ISP → Cloud NAT.
 
@@ -444,7 +444,7 @@ MikroTik Surabaya berhasil ping ke internet (8.8.8.8) dengan packet-loss=0%, mem
 
 #### Screenshot `get system interface physical`
 
-![get system interface physical surabaya](get_system_interface_physical_fortinet_surabaya.png)
+![get system interface physical surabaya](screenshots/get%20system%20interface%20physical%20fortinet%20surabaya.png)
 
 Status interface FortiGate Surabaya:
 - port1: `10.0.13.2/30` — UP (link WAN ke MikroTik ISP)
@@ -453,7 +453,7 @@ Status interface FortiGate Surabaya:
 
 #### Screenshot `get router info routing-table all`
 
-![routing table all surabaya](get_router_info_routing-table_fortiget_surabaya.png)
+![routing table all surabaya](screenshots/get%20router%20info%20routing-table%20fortiget%20surabaya.png)
 
 Routing table lengkap FortiGate Surabaya:
 - `S* 0.0.0.0/0` via 10.0.13.1, port1 (default route ke ISP)
@@ -465,13 +465,13 @@ Routing table lengkap FortiGate Surabaya:
 
 #### Screenshot Ping ke 8.8.8.8 — FortiGate Surabaya
 
-![ping 8.8.8.8 fortigate surabaya](ping_8_8_8_8_mikrotik_surabaya.png)
+![ping 8.8.8.8 fortigate surabaya](screenshots/execute%20ping%208.8.8.8%20fortiget%20jakarta.png)
 
 FortiGate Surabaya berhasil mengakses internet (8.8.8.8) dengan 0% packet loss.
 
 #### Screenshot Ping ke IP Tunnel Jakarta (172.16.0.1)
 
-![ping tunnel jakarta](ping_172_16_0_1_fortiget_surabaya.png)
+![ping tunnel jakarta](screenshots/ping%20172.16.0.1%20fortiget%20surabaya.png)
 
 ```
 Fortinet-Surabaya # execute ping 172.16.0.1
@@ -483,7 +483,7 @@ GRE Tunnel aktif — FortiGate Surabaya berhasil ping FortiGate Jakarta melalui 
 
 #### Screenshot `get router info ospf neighbor`
 
-![ospf neighbor surabaya](get_router_info_ospf_neighbor_fortiget_surabaya.png)
+![ospf neighbor surabaya](screenshots/get%20router%20info%20ospf%20neighbor%20fortiget%20surabaya.png)
 
 ```
 OSPF process 0, VRF 0:
@@ -495,7 +495,7 @@ OSPF Neighbor dengan FortiGate Jakarta (Router ID 1.1.1.1) berstatus **Full** me
 
 #### Screenshot `get router info routing-table ospf`
 
-![ospf routing table surabaya](get_router_info_routing-table_ospf_fortiget_surabaya.png)
+![ospf routing table surabaya](screenshots/get%20router%20info%20routing-table%20ospf%20fortiget%20surabaya.png)
 
 Route yang diterima dari Jakarta via OSPF:
 - `O E2 192.168.10.0/24` via 172.16.0.1, GRE-SBY-JKT (VLAN Finance Jakarta)
@@ -526,6 +526,11 @@ Rute dikelola secara dinamis oleh **OSPF over GRE**:
 
 Untuk **failover gateway Jakarta**, VRRP memastikan bahwa jika salah satu router (Cisco atau MikroTik) down, router lainnya otomatis mengambil alih sebagai Master tanpa intervensi manual.
 
+---
+
+## 5. Kesimpulan
+
+Praktikum ini berhasil mengimplementasikan jaringan enterprise yang menghubungkan kantor Jakarta (HQ) dan Surabaya (Branch). VLAN, VRRP, dan DHCP terpusat berjalan dengan baik di sisi Jakarta, begitu pula VLAN dan DHCP lokal di sisi Surabaya. GRE Tunnel antar-FortiGate berhasil terbentuk, dan OSPF over GRE berhasil mendistribusikan route antar-site secara dinamis dengan status neighbor Full. Seluruh perangkat dapat mengakses internet melalui MikroTik ISP dengan NAT Masquerade. Satu-satunya kendala yang dihadapi adalah instalasi Nginx di Ubuntu Server yang tidak berhasil diselesaikan karena paket tidak dapat diunduh saat menjalankan `apt install nginx -y` akibat kendala koneksi ke repository.
 ---
 
 ## 5. Kesimpulan
