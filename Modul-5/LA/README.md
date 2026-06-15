@@ -335,9 +335,8 @@ NAT Masquerade aktif pada ether1 sehingga semua traffic dari jaringan lab dapat 
 - Instalasi ISC-DHCP Server dan konfigurasi pool VLAN 10 dan VLAN 20
 - Instalasi Nginx sebagai web server Jakarta
 
-> **⚠️ Catatan Kendala — Screenshot Nginx tidak tersedia**
->
-> Pada saat pengerjaan modul ini, Ubuntu Server **tidak dapat menginstall Nginx** karena kendala koneksi jaringan saat proses `apt install nginx -y`. Paket tidak dapat diunduh dari repository sehingga instalasi Nginx tidak berhasil diselesaikan. Oleh karena itu, screenshot tampilan web server Nginx dari browser tidak dapat disertakan dalam laporan ini. Screenshot untuk `ip a`, `ip route`, isi `/etc/dhcp/dhcpd.conf`, dan ping 8.8.8.8 sudah didokumentasikan pada sesi sebelumnya.
+ Kendala — Screenshot Nginx tidak tersedia
+ Pada saat pengerjaan modul ini, Ubuntu Server **tidak dapat menginstall Nginx** karena kendala koneksi jaringan saat proses `apt install nginx -y`. Paket tidak dapat diunduh dari repository sehingga instalasi Nginx tidak berhasil diselesaikan. Oleh karena itu, screenshot tampilan web server Nginx dari browser tidak dapat disertakan dalam laporan ini. Screenshot untuk `ip a`, `ip route`, isi `/etc/dhcp/dhcpd.conf`, dan ping 8.8.8.8 sudah didokumentasikan pada sesi sebelumnya.
 
 ---
 
