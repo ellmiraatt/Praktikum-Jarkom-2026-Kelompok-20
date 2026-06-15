@@ -77,7 +77,7 @@ Perangkat yang digunakan antara lain: Cisco VIoS, Cisco Switch, MikroTik RouterO
 
 ---
 
-### Tugas Modul 1 — Konfigurasi Cisco Switch Jakarta
+### Tugas Modul 1  Konfigurasi Cisco Switch Jakarta
 
 **Perangkat:** Cisco Switch Jakarta
 
@@ -106,7 +106,7 @@ Hasil `show interfaces trunk` menunjukkan:
 
 ---
 
-### Tugas Modul 2 — Konfigurasi Cisco Router Jakarta
+### Tugas Modul 2 Konfigurasi Cisco Router Jakarta
 
 **Perangkat:** Cisco Router Jakarta
 
@@ -152,7 +152,7 @@ Cisco Router Jakarta berhasil ping ke FortiGate Jakarta (10.10.100.1) dengan suc
 
 ---
 
-### Tugas Modul 3 — Konfigurasi MikroTik Router Jakarta
+### Tugas Modul 3  Konfigurasi MikroTik Router Jakarta
 
 **Perangkat:** MikroTik Router Jakarta
 
@@ -200,7 +200,7 @@ MikroTik Jakarta berhasil ping ke FortiGate Jakarta (10.10.101.1) dengan packet-
 
 ---
 
-### Tugas Modul 5 — Konfigurasi FortiGate Jakarta
+### Tugas Modul 5  Konfigurasi FortiGate Jakarta
 
 **Perangkat:** FortiGate Jakarta
 
@@ -259,7 +259,7 @@ Fortinet-Jakarta # execute ping 172.16.0.2
 round-trip min/avg/max = 1.0/1.3/1.8 ms
 ```
 
-GRE Tunnel aktif — FortiGate Jakarta berhasil ping FortiGate Surabaya melalui tunnel.
+GRE Tunnel aktif  FortiGate Jakarta berhasil ping FortiGate Surabaya melalui tunnel.
 
 #### Screenshot `get router info ospf neighbor`
 
@@ -283,7 +283,7 @@ Route yang diterima dari Surabaya via OSPF:
 
 ---
 
-### Tugas Modul 6 — Konfigurasi MikroTik ISP
+### Tugas Modul 6  Konfigurasi MikroTik ISP
 
 **Perangkat:** MikroTik ISP
 
@@ -325,7 +325,7 @@ NAT Masquerade aktif pada ether1 sehingga semua traffic dari jaringan lab dapat 
 
 ---
 
-### Tugas Modul 4 — Konfigurasi Ubuntu Server Jakarta
+### Tugas Modul 4  Konfigurasi Ubuntu Server Jakarta
 
 **Perangkat:** Ubuntu Server Jakarta
 
@@ -340,7 +340,7 @@ NAT Masquerade aktif pada ether1 sehingga semua traffic dari jaringan lab dapat 
 
 ---
 
-### Tugas Modul 6 — Konfigurasi MikroTik ISP (Lanjutan — Bukti Ping)
+### Tugas Modul 6  Konfigurasi MikroTik ISP (Lanjutan — Bukti Ping)
 
 **Perangkat:** MikroTik ISP
 
@@ -364,7 +364,7 @@ MikroTik ISP berhasil ping ke FortiGate Surabaya (10.0.13.2) dengan packet-loss=
 
 ---
 
-### Tugas Modul 7 — Konfigurasi Switch dan MikroTik Surabaya
+### Tugas Modul 7  Konfigurasi Switch dan MikroTik Surabaya
 
 **Perangkat:** Cisco Switch Surabaya dan MikroTik Router Surabaya
 
@@ -428,7 +428,7 @@ MikroTik Surabaya berhasil ping ke internet (8.8.8.8) dengan packet-loss=0%, mem
 
 ---
 
-### Tugas Modul 8 — Konfigurasi FortiGate Surabaya
+### Tugas Modul 8  Konfigurasi FortiGate Surabaya
 
 **Perangkat:** FortiGate Surabaya
 
@@ -462,7 +462,7 @@ Routing table lengkap FortiGate Surabaya:
 - `O E2 192.168.10.0/24`, `192.168.20.0/24`, `192.168.60.0/24` via 172.16.0.1 GRE-SBY-JKT (route Jakarta via OSPF)
 - `S 192.168.30.0/24` dan `S 192.168.40.0/24` via 10.10.200.2, port2 (static route ke VLAN Surabaya)
 
-#### Screenshot Ping ke 8.8.8.8 — FortiGate Surabaya
+#### Screenshot Ping ke 8.8.8.8  FortiGate Surabaya
 
 ![ping 8.8.8.8 fortigate surabaya](<execute ping 8.8.8.8 fortiget jakarta.png>)
 
@@ -478,7 +478,7 @@ Fortinet-Surabaya # execute ping 172.16.0.1
 round-trip min/avg/max = 1.2/1.3/1.5 ms
 ```
 
-GRE Tunnel aktif — FortiGate Surabaya berhasil ping FortiGate Jakarta melalui tunnel dengan latensi sangat rendah.
+GRE Tunnel aktif  FortiGate Surabaya berhasil ping FortiGate Jakarta melalui tunnel dengan latensi sangat rendah.
 
 #### Screenshot `get router info ospf neighbor`
 
