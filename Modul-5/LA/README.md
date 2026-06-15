@@ -9,6 +9,10 @@ Topologi ini adalah simulasi jaringan enterprise yang menghubungkan 2 kantor, ya
 
 Perangkat yang digunakan antara lain: Cisco VIoS, Cisco Switch, MikroTik RouterOS, Fortinet FortiGate, Ubuntu Server, Tinycore Linux, dan VPCS.
 
+#### Topologi Jaringan
+
+![topologi jaringan](<topologi tumod 5.png>)
+
 ---
 
 ## 2. Tabel Addressing
